@@ -279,13 +279,13 @@ function webchangedetector_init()
                     <form action="<?= admin_url() ?>/admin.php?page=webchangedetector&tab=update-settings" method="post" style="float:left; margin-right: 10px;">
                     <input type="hidden" value="take_screenshots" name="wcd_action">
                     <input type="hidden" name="sc_type" value="pre">
-                    <input type="submit" value="Create Reference Screenshots" class="button">
+                    <input type="submit" value="Create Reference Screenshots" <?php echo $available_compares > 0 ? '' : 'disabled'; ?> class="button" id="pre-button">
                     </form>
 
                     <form action="<?= admin_url() ?>/admin.php?page=webchangedetector&tab=update-settings" method="post" style="float:left;">
                     <input type="hidden" value="take_screenshots" name="wcd_action">
                     <input type="hidden" name="sc_type" value="post">
-                    <input type="submit" value="Create Change Detections" class="button">
+                    <input type="submit" value="Create Change Detections" <?php echo $available_compares > 0 ? '' : 'disabled'; ?> class="button" id="post-button">
                     </form>
                 <?php
                 } ?>
