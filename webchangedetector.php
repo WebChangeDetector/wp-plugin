@@ -16,7 +16,7 @@
  * Plugin Name:       WebChangeDetector
  * Plugin URI:        webchangedetector.com
  * Description:       Detect changes on your website visually before and after updating your website. You can also run automatic change detections and get notified on changes of your website.
- * Version:           1.1.1
+ * Version:           1.1.3
  * Author:            Mike Miler
  * Author URI:        webchangedetector.com
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if (! defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('WebChangeDetector_VERSION', '1.1.2');
+define('WebChangeDetector_VERSION', '1.1.3');
 
 /**
  * The code that runs during plugin activation.
@@ -83,7 +83,7 @@ function run_webchangedetector()
 
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/webchangedetector/wp-webchangedetector',
+    'https://www.webchangedetector.com/plugin.json',
     __FILE__, //Full path to the main plugin file or functions.php.
     'webchangedetector'
 );
